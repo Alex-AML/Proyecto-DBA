@@ -1,0 +1,235 @@
+/* ── Tema global ── */
+:root {
+  --bg-outer:   #0a1628;
+  --bg-card:    #111e30;
+  --bg-header:  #152540;
+  --bg-input:   #0d1b2a;
+  --border:     #1e3a52;
+  --accent:     #38bdf8;
+  --text-main:  #ffffff;
+  --text-muted: #6b8aa8;
+}
+
+body {
+  background-color: var(--bg-outer);
+  min-height: 100vh;
+  color: var(--text-main);
+}
+
+/* ── Navbar personalizado ── */
+.navbar.bg-primary {
+  background: linear-gradient(135deg, #0a1628 0%, #152540 100%) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--text-muted);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--accent);
+}
+
+/* ── Wrapper centrado ── */
+.vicar-login-wrapper {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Card única ── */
+.dba-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg-card);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* ── Header con ícono y título ── */
+.dba-header {
+  background: var(--bg-header);
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.dba-icon {
+  width: 72px;
+  height: 72px;
+  background: #1a2e42;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.dba-header h1 {
+  font-size: 1.8rem;
+  margin: 0 0 6px;
+  color: var(--text-main);
+}
+
+.dba-bold  { font-weight: 700; }
+.dba-accent { color: var(--accent); font-weight: 400; }
+
+.dba-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Formulario ── */
+.dba-body {
+  padding: 2rem;
+}
+
+.dba-field {
+  margin-bottom: 1.25rem;
+}
+
+.dba-field label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.dba-input {
+  width: 100%;
+  height: 48px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 0 1.25rem;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.dba-input:focus {
+  border-color: var(--accent);
+}
+
+.dba-input::placeholder {
+  color: var(--text-muted);
+}
+
+.dba-btn {
+  width: 100%;
+  height: 52px;
+  background: var(--accent);
+  border: none;
+  border-radius: 50px;
+  color: #0a1628;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.dba-btn:hover { opacity: 0.9; }
+
+/* ── Footer ── */
+.dba-footer {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+.dba-footer strong {
+  color: var(--text-main);
+}
+
+/* ── Estilos para toda la app (Dashboard, tablas, etc.) ── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: none;
+  color: var(--text-main);
+}
+
+.card-header {
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-main);
+}
+ 
+.table {
+  color: var(--text-main);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  color: #ffffff;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(17, 30, 48, 0.5);
+}
+
+.table-dark {
+  background-color: var(--bg-header);
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #0a1628;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.btn-success {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.btn-warning {
+  background-color: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.btn-info {
+  background-color: #06b6d4;
+  border-color: #06b6d4;
+}
+
+.alert-success {
+  background-color: #065f46;
+  color: #d1fae5;
+  border-color: #047857;
+}
+
+.alert-danger {
+  background-color: #991b1b;
+  color: #fee2e2;
+  border-color: #dc2626;
+}
+
+.alert-warning {
+  background-color: #92400e;
+  color: #fed7aa;
+  border-color: #d97706;
+}
+
+.alert-info {
+  background-color: #1e3a8a;
+  color: #dbeafe;
+  border-color: #2563eb;
+}

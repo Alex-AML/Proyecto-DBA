@@ -1,0 +1,39 @@
+{% extends "Base.html" %}
+{% block content %}
+<div class="dba-login-wrapper">
+  <div class="dba-card">
+
+    <div class="dba-header">
+      <div class="Icono">
+        <!--<i class="bi bi-truck"></i>-->
+        <img src="{{ url_for('static', filename='Icono.png') }}" style="width:50px; height:50px;">
+      </div>
+      <h1><span class="dba-bold">NombreProyecto</span></h1>
+      <p><span class="dba-accent">Sistema...</span></p>
+    </div>
+
+    <div class="dba-body">
+      <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="dba-field">
+          <label>Usuario</label>
+          {{ form.username(class="dba-input", placeholder="Nombre de usuario") }}
+        </div>
+        <div class="dba-field">
+          <label>Contraseña</label>
+          {{ form.password(class="dba-input", placeholder="••••••••") }}
+        </div>
+        <button type="submit" class="dba-btn">
+          <i class="bi bi-box-arrow-in-right"></i> Ingresar
+        </button>
+      </form>
+    </div>
+
+    <div class="dba-footer">
+      <i class="bi bi-info-circle"></i>
+      Acceso de prueba: <strong>admin / admin123</strong>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
